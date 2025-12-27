@@ -73,17 +73,17 @@ export const Header = () => {
               const isActive = activePath === link.path;
               return (
                 <Link
-                  key={link.name}
+                key={link.name}
                   to={link.href}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-primary/10 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-primary/10 ${
                     isActive
-                      ? "text-primary bg-primary/10"
-                      : isScrolled
-                      ? "text-foreground hover:text-primary"
-                      : "text-primary-foreground/90 hover:text-primary-foreground"
-                  }`}
-                >
-                  {link.name}
+                    ? "text-primary bg-primary/10"
+                    : isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-primary-foreground/90 hover:text-primary-foreground"
+                }`}
+              >
+                {link.name}
                 </Link>
               );
             })}
@@ -92,9 +92,9 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button variant="nav" size="default">
-                Get a Quote
-              </Button>
+            <Button variant="nav" size="default">
+              Get a Quote
+            </Button>
             </Link>
           </div>
 
@@ -119,23 +119,23 @@ export const Header = () => {
                 const isActive = activePath === link.path;
                 return (
                   <Link
-                    key={link.name}
+                  key={link.name}
                     to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                       isActive
-                        ? "text-primary bg-primary/10"
-                        : "text-foreground hover:bg-muted hover:text-primary"
-                    }`}
-                  >
-                    {link.name}
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:bg-muted hover:text-primary"
+                  }`}
+                >
+                  {link.name}
                   </Link>
                 );
               })}
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="default" size="lg" className="mt-2 w-full">
-                  Get a Quote
-                </Button>
+                Get a Quote
+              </Button>
               </Link>
             </nav>
           </div>

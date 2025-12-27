@@ -52,16 +52,16 @@ export const Hero = () => {
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
             <Link to="/products">
-              <Button variant="hero" size="xl">
-                Explore Products
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+            <Button variant="hero" size="xl">
+              Explore Products
+              <ArrowRight className="w-5 h-5" />
+            </Button>
             </Link>
             <Link to="/about">
-              <Button variant="heroOutline" size="xl">
-                <Play className="w-5 h-5" />
-                How It Works
-              </Button>
+            <Button variant="heroOutline" size="xl">
+              <Play className="w-5 h-5" />
+              How It Works
+            </Button>
             </Link>
           </div>
 
