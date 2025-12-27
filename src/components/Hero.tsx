@@ -11,6 +11,8 @@ export const Hero = () => {
           src={heroImage}
           alt="Lush green farmland with farmers working during golden hour"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-[hsl(150,30%,10%,0.7)]" />
       </div>

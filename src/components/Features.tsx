@@ -128,6 +128,7 @@ export const Features = () => {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
               />

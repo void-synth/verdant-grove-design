@@ -137,6 +137,8 @@ export const Header = () => {
                 src={logoImage}
                 alt="Netcross Farms Logo"
                 className="h-10 w-auto object-contain"
+                loading="eager"
+                fetchPriority="high"
               />
               <span className="font-bold text-xl text-primary-foreground hidden sm:block">
                 Netcross <span className="text-accent">Agro</span>

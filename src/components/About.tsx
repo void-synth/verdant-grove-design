@@ -69,6 +69,7 @@ export const About = () => {
                 src={farmersImage}
                 alt="Farmers happily harvesting fresh cassava in a green field"
                 className="w-full h-[350px] lg:h-[420px] object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -82,6 +83,7 @@ export const About = () => {
                 src={aboutImage1}
                 alt="Serene rural landscape with golden hour lighting"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -94,6 +96,7 @@ export const About = () => {
                 src={produceImage}
                 alt="Fresh cassava and garri flour products on rustic table"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -107,6 +110,7 @@ export const About = () => {
                 src={aboutImage2}
                 alt="Person walking through dense cornfield showing quality agricultural crops"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 

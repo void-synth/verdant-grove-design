@@ -75,6 +75,7 @@ export const Footer = () => {
                 src={logoImage}
                 alt="Netcross Farms Logo"
                 className="h-10 w-auto object-contain"
+                loading="eager"
               />
               <span className="font-bold text-xl">Netcross Agro</span>
             </a>
