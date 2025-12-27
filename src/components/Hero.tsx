@@ -20,7 +20,7 @@ export const Hero = () => {
       {/* Content - Asymmetric Layout */}
       <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-4xl mx-auto lg:max-w-5xl">
-          <div className="text-center lg:text-left lg:pl-8">
+          <div className="text-center lg:text-left">
           {/* Badge */}
           <div 
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6 opacity-0 animate-fade-in"
@@ -44,7 +44,7 @@ export const Hero = () => {
 
           {/* Supporting Text */}
           <p 
-            className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in"
+            className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mb-10 leading-relaxed opacity-0 animate-fade-in lg:mx-0 mx-auto"
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
             We're not just another farm—we're your trusted partner in bringing authentic, 
@@ -54,7 +54,7 @@ export const Hero = () => {
 
           {/* CTA Buttons */}
           <div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in"
+            className="flex flex-col sm:flex-row items-center gap-4 opacity-0 animate-fade-in lg:justify-start justify-center"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
             <Button 
@@ -103,7 +103,7 @@ export const Hero = () => {
 
           {/* Stats - Staggered Layout */}
           <div 
-            className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 opacity-0 animate-fade-in"
+            className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 opacity-0 animate-fade-in text-center lg:text-left"
             style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
           >
             <div className="transform -rotate-1 hover:rotate-0 transition-transform duration-300">
