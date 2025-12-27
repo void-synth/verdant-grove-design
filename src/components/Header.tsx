@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import logoImage from "@/assets/logo-removebg-preview.png";
 
 const navLinks = [
@@ -54,12 +53,12 @@ export const Header = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2 group z-10"
           >
             <img
               src={logoImage}
               alt="Netcross Farms Logo"
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
               loading="eager"
             />
             <span className={`font-bold text-xl transition-colors ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
@@ -67,32 +66,33 @@ export const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center justify-center gap-2 absolute left-1/2 transform -translate-x-1/2">
             {navLinks.map((link) => {
               const isActive = activePath === link.path;
               return (
                 <Link
-                key={link.name}
+                  key={link.name}
                   to={link.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-primary/10 ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     isActive
-                    ? "text-primary bg-primary/10"
-                    : isScrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-primary-foreground/90 hover:text-primary-foreground"
-                }`}
-              >
-                {link.name}
+                      ? "text-primary bg-primary/10 shadow-sm"
+                      : isScrolled
+                      ? "text-foreground hover:text-primary hover:bg-primary/5"
+                      : "text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary/10"
+                  }`}
+                >
+                  {link.name}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Right aligned */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors z-10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
               <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
@@ -104,22 +104,22 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 p-4 bg-background rounded-2xl shadow-large animate-fade-in">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden mt-4 p-4 bg-background/95 backdrop-blur-md rounded-2xl shadow-large border border-primary/10 animate-fade-in">
+            <nav className="flex flex-col gap-1">
               {navLinks.map((link) => {
                 const isActive = activePath === link.path;
                 return (
                   <Link
-                  key={link.name}
+                    key={link.name}
                     to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                       isActive
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground hover:bg-muted hover:text-primary"
-                  }`}
-                >
-                  {link.name}
+                        ? "text-primary bg-primary/10 shadow-sm"
+                        : "text-foreground hover:bg-primary/5 hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
                   </Link>
                 );
               })}
