@@ -89,15 +89,6 @@ export const Header = () => {
             })}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link to="/contact">
-            <Button variant="nav" size="default">
-              Get a Quote
-            </Button>
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
@@ -132,11 +123,6 @@ export const Header = () => {
                   </Link>
                 );
               })}
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="default" size="lg" className="mt-2 w-full">
-                Get a Quote
-              </Button>
-              </Link>
             </nav>
           </div>
         )}
