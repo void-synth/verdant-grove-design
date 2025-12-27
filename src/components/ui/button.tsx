@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-glow shadow-medium hover:shadow-large hover:scale-105 active:scale-95 rounded-full",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-lg",
-        outline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground rounded-full hover:scale-105 active:scale-95",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg",
-        ghost: "hover:bg-accent hover:text-accent-foreground rounded-lg",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-glow shadow-large hover:shadow-xl hover:scale-105 active:scale-95 rounded-full",
-        heroOutline: "border-2 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 backdrop-blur-sm hover:bg-primary-foreground/20 hover:border-primary-foreground/50 rounded-full hover:scale-105 active:scale-95",
-        nav: "bg-primary text-primary-foreground hover:bg-primary-glow shadow-soft hover:shadow-medium hover:scale-105 active:scale-95 rounded-full",
+        default: "bg-primary text-primary-foreground shadow-medium rounded-full",
+        destructive: "bg-destructive text-destructive-foreground rounded-lg",
+        outline: "border-2 border-primary text-primary bg-transparent rounded-full",
+        secondary: "bg-secondary text-secondary-foreground rounded-lg",
+        ghost: "rounded-lg",
+        link: "text-primary underline-offset-4",
+        hero: "bg-primary text-primary-foreground shadow-large rounded-full",
+        heroOutline: "border-2 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 backdrop-blur-sm rounded-full",
+        nav: "bg-primary text-primary-foreground shadow-soft rounded-full",
       },
       size: {
         default: "h-11 px-6 py-2",

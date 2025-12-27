@@ -12,12 +12,13 @@ export const Hero = () => {
           alt="Lush green farmland with farmers working during golden hour"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(150,30%,10%,0.6)] via-[hsl(150,30%,10%,0.65)] to-[hsl(150,30%,10%,0.8)]" />
+        <div className="absolute inset-0 bg-[hsl(150,30%,10%,0.7)]" />
       </div>
 
-      {/* Content */}
+      {/* Content - Asymmetric Layout */}
       <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto lg:max-w-5xl">
+          <div className="text-center lg:text-left lg:pl-8">
           {/* Badge */}
           <div 
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6 opacity-0 animate-fade-in"
@@ -27,13 +28,16 @@ export const Hero = () => {
             Trusted Agro Farm Since 2010
           </div>
 
-          {/* Headline */}
+          {/* Headline - More Unique Typography */}
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-in"
+            className="text-display text-primary-foreground mb-6 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
             Quality & Sustainable{" "}
-            <span className="text-accent">Agro Products</span>
+            <span className="text-accent relative inline-block">
+              Agro Products
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-accent/30 rounded-full transform -skew-x-12" />
+            </span>
           </h1>
 
           {/* Supporting Text */}
@@ -41,8 +45,9 @@ export const Hero = () => {
             className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in"
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
-            From our farms to your table. We deliver premium quality garri, cassava, 
-            maize flour, and fresh produce with commitment to sustainable farming practices.
+            We're not just another farm—we're your trusted partner in bringing authentic, 
+            farm-fresh garri, cassava, and maize flour directly from our fields to your kitchen. 
+            Every batch tells a story of sustainable farming and unwavering quality.
           </p>
 
           {/* CTA Buttons */}
@@ -50,33 +55,68 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
-            <Button variant="hero" size="xl">
+            <Button 
+              variant="hero" 
+              size="xl"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("products");
+                if (element) {
+                  const headerHeight = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                  });
+                  window.history.pushState(null, "", "#products");
+                }
+              }}
+            >
               Explore Products
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button 
+              variant="heroOutline" 
+              size="xl"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("about");
+                if (element) {
+                  const headerHeight = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                  });
+                  window.history.pushState(null, "", "#about");
+                }
+              }}
+            >
               <Play className="w-5 h-5" />
               How It Works
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Stats - Staggered Layout */}
           <div 
             className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
           >
-            <div>
+            <div className="transform -rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">15+</div>
               <div className="text-sm text-primary-foreground/70">Years Experience</div>
             </div>
-            <div>
+            <div className="transform rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">500+</div>
               <div className="text-sm text-primary-foreground/70">Happy Clients</div>
             </div>
-            <div>
+            <div className="transform -rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">50+</div>
               <div className="text-sm text-primary-foreground/70">Tons Monthly</div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -92,7 +132,7 @@ export const Hero = () => {
         >
           <path
             d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            fill="hsl(0, 0%, 100%)"
+            fill="hsl(45, 25%, 97%)"
           />
         </svg>
       </div>
