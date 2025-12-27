@@ -1,4 +1,5 @@
 import { Wheat, Factory, Package, Truck, ArrowRight } from "lucide-react";
+import servicesBgImage from "@/assets/services-bg.jpg";
 
 const services = [
   {
@@ -29,7 +30,14 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="section-padding bg-secondary relative overflow-hidden">
+    <section id="services" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${servicesBgImage})` }}
+      />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-secondary/90 backdrop-blur-[2px]" />
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] leaf-pattern" />
       

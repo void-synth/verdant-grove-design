@@ -1,6 +1,7 @@
 import { CheckCircle2, Play, Pause } from "lucide-react";
 import { useState } from "react";
 import featuresVideo from "@/assets/A_realistic_cinematic_202512271326_yamfd.mp4";
+import productsBgImage from "@/assets/products-bg.jpg";
 
 const features = [
   "Hygienically processed in modern facilities",
@@ -25,7 +26,14 @@ export const Features = () => {
   };
 
   return (
-    <section id="products" className="section-padding bg-background relative overflow-hidden">
+    <section id="products" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${productsBgImage})` }}
+      />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-[2px]" />
       {/* Curved Divider at Top */}
       <div className="absolute top-0 left-0 right-0">
         <svg

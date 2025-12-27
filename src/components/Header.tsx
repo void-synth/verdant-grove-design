@@ -115,7 +115,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/20 backdrop-blur-md py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/50 backdrop-blur-xl py-5 border-b border-primary/10 shadow-lg">
       <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
           {/* Logo - Left */}

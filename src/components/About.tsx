@@ -4,6 +4,7 @@ import farmersImage from "@/assets/farmers-harvesting.jpg";
 import produceImage from "@/assets/farm-produce.jpg";
 import aboutImage1 from "@/assets/file-1.jpg";
 import aboutImage2 from "@/assets/file-2.jpg";
+import aboutBgImage from "@/assets/about-us-bg.jpg";
 
 const features = [
   "Premium Garri Production",
@@ -14,7 +15,14 @@ const features = [
 
 export const About = () => {
   return (
-    <section id="about" className="section-padding bg-[hsl(142,60%,98%)] relative overflow-hidden">
+    <section id="about" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aboutBgImage})` }}
+      />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-[hsl(142,60%,98%)]/85 backdrop-blur-[2px]" />
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] leaf-pattern" />
       {/* Curved Divider at Top */}
