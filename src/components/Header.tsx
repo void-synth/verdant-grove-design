@@ -44,8 +44,8 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/50 backdrop-blur-md shadow-medium py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/75 backdrop-blur-md shadow-medium py-3"
+          : "bg-background/80 backdrop-blur-sm py-5"
       } ${isPageTransition ? 'opacity-0 translate-y-[-10px]' : 'opacity-100 translate-y-0'}`}
     >
       <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
