@@ -1,5 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
-import backgroundVideo from "@/assets/background-video.mp4";
+import { CheckCircle2, Play } from "lucide-react";
+import maizeImage from "@/assets/maize.jpg";
 
 const features = [
   "Hygienically processed in modern facilities",
@@ -58,25 +58,24 @@ export const Features = () => {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video/Image Section */}
           <div 
             className="order-1 lg:order-2 relative opacity-0 animate-scale-in"
             style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src={maizeImage}
+                alt="Golden ripe maize corn on stalks in agricultural field"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
-              >
-                <source src={backgroundVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
               
-              {/* Subtle Overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 via-transparent to-transparent pointer-events-none" />
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center">
+                <button className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-xl hover:scale-110 transition-transform group">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1 group-hover:scale-110 transition-transform" />
+                </button>
+              </div>
             </div>
 
             {/* Decorative Elements */}
