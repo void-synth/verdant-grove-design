@@ -1,7 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import farmersImage from "@/assets/farmers-harvesting.jpg";
-import produceImage from "@/assets/farm-produce.jpg";
+import cassavaImage from "@/assets/cassava.jpg";
+import garriImage from "@/assets/garri.jpg";
 
 const features = [
   "Premium Garri Production",
@@ -23,8 +23,8 @@ export const About = () => {
               style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
             >
               <img
-                src={farmersImage}
-                alt="Farmers happily harvesting fresh cassava in a green field"
+                src={cassavaImage}
+                alt="Fresh cassava harvest"
                 className="w-full h-[400px] object-cover"
               />
             </div>
@@ -35,8 +35,8 @@ export const About = () => {
               style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
             >
               <img
-                src={produceImage}
-                alt="Fresh cassava and garri flour products on rustic table"
+                src={garriImage}
+                alt="Premium garri products"
                 className="w-full h-full object-cover"
               />
             </div>

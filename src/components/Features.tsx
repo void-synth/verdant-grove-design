@@ -1,5 +1,5 @@
 import { CheckCircle2, Play } from "lucide-react";
-import maizeImage from "@/assets/maize-field.jpg";
+import maizeImage from "@/assets/maize.jpg";
 
 const features = [
   "Hygienically processed in modern facilities",

@@ -5,7 +5,7 @@ import { ArrowRight, Users, Award, Leaf, Heart, TrendingUp, CheckCircle2 } from 
 import { Link } from "react-router-dom";
 import aboutPageHero from "@/assets/about-page-hero.jpg";
 import aboutTeam from "@/assets/about-team.jpg";
-import aboutFarm from "@/assets/about-farm.jpg";
+import fromSeedToTable from "@/assets/from-seed-to-table.jpg";
 
 const About = () => {
   return (
@@ -73,8 +73,8 @@ const About = () => {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src={aboutFarm}
-                    alt="Our farm operations"
+                    src={fromSeedToTable}
+                    alt="From seed to table journey"
                     className="w-full h-[500px] object-cover"
                     loading="lazy"
                   />
@@ -221,5 +221,6 @@ const About = () => {
 };
 
 export default About;
+
 
 

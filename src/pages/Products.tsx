@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag, Star, CheckCircle2, Package, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import productsPageHero from "@/assets/products-page-hero.jpg";
+import garriImage from "@/assets/garri.jpg";
+import cassavaImage from "@/assets/cassava.jpg";
+import maizeImage from "@/assets/maize.jpg";
+import giftPackagesImage from "@/assets/gift-packages.jpg";
+import bulkImage from "@/assets/bulk.jpg";
 
 const Products = () => {
   const products = [
@@ -17,7 +22,7 @@ const Products = () => {
         "Hygienic production",
         "Available in bulk",
       ],
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
+      image: garriImage,
       price: "From ₦2,500/kg",
     },
     {
@@ -30,7 +35,7 @@ const Products = () => {
         "Premium quality",
         "Bulk orders available",
       ],
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
+      image: cassavaImage,
       price: "From ₦1,200/kg",
     },
     {
@@ -43,7 +48,7 @@ const Products = () => {
         "Versatile usage",
         "Fresh packaging",
       ],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+      image: maizeImage,
       price: "From ₦1,800/kg",
     },
     {
@@ -56,7 +61,7 @@ const Products = () => {
         "Consistent quality",
         "Bulk packaging",
       ],
-      image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&q=80",
+      image: cassavaImage,
       price: "From ₦3,000/kg",
     },
     {
@@ -69,7 +74,7 @@ const Products = () => {
         "Customizable",
         "Perfect for gifts",
       ],
-      image: "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=80",
+      image: giftPackagesImage,
       price: "From ₦5,000",
     },
     {
@@ -82,7 +87,7 @@ const Products = () => {
         "Flexible quantities",
         "Reliable supply",
       ],
-      image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+      image: bulkImage,
       price: "Contact for pricing",
     },
   ];
@@ -251,5 +256,6 @@ const Products = () => {
 };
 
 export default Products;
+
 
 

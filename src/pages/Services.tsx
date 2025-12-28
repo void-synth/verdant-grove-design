@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Wheat, Factory, Package, Truck, CheckCircle2, Clock, Shield, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import servicesPageHero from "@/assets/services-page-hero.jpg";
-import farmersHarvesting from "@/assets/farmers-harvesting.jpg";
-import farmProduce from "@/assets/farm-produce.jpg";
-import maizeField from "@/assets/maize-field.jpg";
-import serviceBulkSupply from "@/assets/service-bulk-supply.jpg";
+import garriImage from "@/assets/garri.jpg";
+import cassavaImage from "@/assets/cassava.jpg";
+import maizeImage from "@/assets/maize.jpg";
+import bulkImage from "@/assets/bulk.jpg";
 
 const Services = () => {
   const services = [
@@ -21,7 +21,7 @@ const Services = () => {
         "Hygienic production facilities",
         "Custom packaging available",
       ],
-      image: farmersHarvesting,
+      image: garriImage,
     },
     {
       icon: Factory,
@@ -33,7 +33,7 @@ const Services = () => {
         "Bulk processing capabilities",
         "Custom processing services",
       ],
-      image: servicesPageHero,
+      image: cassavaImage,
     },
     {
       icon: Package,
@@ -45,7 +45,7 @@ const Services = () => {
         "Versatile for many recipes",
         "Fresh packaging",
       ],
-      image: maizeField,
+      image: maizeImage,
     },
     {
       icon: Truck,
@@ -57,7 +57,7 @@ const Services = () => {
         "Reliable delivery",
         "Flexible quantities",
       ],
-      image: farmProduce,
+      image: bulkImage,
     },
   ];
 
