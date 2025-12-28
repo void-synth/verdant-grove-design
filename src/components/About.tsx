@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import cassavaImage from "@/assets/cassava.jpg";
 import garriImage from "@/assets/garri.jpg";
 
@@ -91,9 +92,11 @@ export const About = () => {
               className="opacity-0 animate-fade-in"
               style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
             >
-              <Button variant="default" size="lg">
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button variant="default" size="lg">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

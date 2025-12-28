@@ -39,12 +39,28 @@ export const Hero = () => {
 
           {/* Supporting Text */}
           <p 
-            className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in"
+            className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-6 leading-relaxed opacity-0 animate-fade-in"
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
             From our farms to your table. We deliver premium quality garri, cassava, 
             maize flour, and fresh produce with commitment to sustainable farming practices.
           </p>
+          
+          {/* Innovation Highlights */}
+          <div 
+            className="flex flex-wrap items-center justify-center gap-4 mb-10 opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
+          >
+            <div className="px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium">
+              ✓ Sustainable Farming
+            </div>
+            <div className="px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium">
+              ✓ Quality Assured
+            </div>
+            <div className="px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium">
+              ✓ Nationwide Delivery
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div 
