@@ -7,7 +7,6 @@ import productsPageHero from "@/assets/products-page-hero.jpg";
 import garriImage from "@/assets/garri.jpg";
 import cassavaImage from "@/assets/cassava.jpg";
 import maizeImage from "@/assets/maize.jpg";
-import giftPackagesImage from "@/assets/gift-packages.jpg";
 import bulkImage from "@/assets/bulk.jpg";
 
 const Products = () => {
@@ -24,19 +23,6 @@ const Products = () => {
       ],
       image: garriImage,
       price: "From ₦2,500/kg",
-    },
-    {
-      name: "Fresh Cassava Roots",
-      category: "Raw Products",
-      description: "Freshly harvested cassava roots, sourced directly from our farms. Perfect for those who prefer to process at home.",
-      features: [
-        "Freshly harvested",
-        "Direct from farm",
-        "Premium quality",
-        "Bulk orders available",
-      ],
-      image: cassavaImage,
-      price: "From ₦1,200/kg",
     },
     {
       name: "Maize Flour",
@@ -63,19 +49,6 @@ const Products = () => {
       ],
       image: cassavaImage,
       price: "From ₦3,000/kg",
-    },
-    {
-      name: "Gift Packages",
-      category: "Souvenirs",
-      description: "Beautifully packaged gift sets perfect for special occasions. Includes our premium products in elegant packaging.",
-      features: [
-        "Elegant packaging",
-        "Premium products",
-        "Customizable",
-        "Perfect for gifts",
-      ],
-      image: giftPackagesImage,
-      price: "From ₦5,000",
     },
     {
       name: "Bulk Orders",
