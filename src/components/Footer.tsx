@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, ArrowRight } from "lucide-react";
-import logoImage from "@/assets/logo-removebg-preview.png";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -62,7 +61,7 @@ export const Footer = () => {
               className="flex items-center gap-2 mb-5 hover:opacity-80 transition-opacity"
             >
               <img
-                src={logoImage}
+                src="/logo-removebg-preview.png"
                 alt="Netcross Farms Logo"
                 className="h-10 w-auto object-contain"
                 loading="eager"

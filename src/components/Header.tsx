@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logoImage from "@/assets/logo-removebg-preview.png";
 
 const navLinks = [
   { name: "Home", href: "/", path: "/" },
@@ -56,7 +55,7 @@ export const Header = () => {
             className="flex items-center gap-2 group z-10"
           >
             <img
-              src={logoImage}
+              src="/logo-removebg-preview.png"
               alt="Netcross Farms Logo"
               className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
               loading="eager"
