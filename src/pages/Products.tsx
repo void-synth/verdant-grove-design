@@ -80,11 +80,11 @@ const Products = () => {
             />
             <div className="absolute inset-0 bg-[hsl(150,30%,10%,0.7)]" />
           </div>
-          <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
+          <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 px-2">
               Our Products
             </h1>
-            <p className="text-xl sm:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 max-w-3xl mx-auto px-4">
               Premium agro products, from our farm to your table
             </p>
           </div>
@@ -93,26 +93,26 @@ const Products = () => {
         {/* Products Grid */}
         <section className="section-padding bg-background">
           <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
-                <ShoppingBag className="w-4 h-4" />
+            <div className="text-center mb-10 sm:mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4 border border-primary/15">
+                <ShoppingBag className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
                 Product Catalog
               </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-4">
                 Quality Products You Can Trust
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                 Explore our range of premium agro products, each crafted with care and attention to detail.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
               {products.map((product, index) => (
                 <div
                   key={index}
                   className="group bg-background rounded-3xl overflow-hidden shadow-lg border border-primary/5 hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -120,25 +120,29 @@ const Products = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-primary/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-primary border border-primary/30">
+                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+                      <div className={`backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-medium border ${
+                        index % 2 === 0
+                          ? 'bg-orange-400/15 text-orange-400 border-orange-400/20'
+                          : 'bg-primary/20 text-primary border-primary/30'
+                      }`}>
                         {product.category}
                       </div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-2">{product.name}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{product.description}</p>
+                  <div className="p-4 sm:p-5 md:p-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1.5 sm:mb-2">{product.name}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed">{product.description}</p>
                     <ul className="space-y-2 mb-4">
                       {product.features.slice(0, 2).map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                          <CheckCircle2 className={`w-4 h-4 flex-shrink-0 ${idx % 2 === 0 ? 'text-orange-400' : 'text-primary'}`} />
                           <span className="text-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <div className="flex items-center justify-between pt-4 border-t border-primary/5">
-                      <span className="text-lg font-bold text-primary">{product.price}</span>
+                      <span className={`text-lg font-bold ${index % 2 === 0 ? 'text-orange-400' : 'text-primary'}`}>{product.price}</span>
                       <Link to="/contact">
                         <Button size="sm" variant="outline">
                           View Details
@@ -158,7 +162,7 @@ const Products = () => {
           <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-400/10 to-primary/10 rounded-full text-primary text-sm font-medium border border-orange-400/15">
                   <Star className="w-4 h-4" />
                   Quality Assurance
                 </div>
@@ -171,12 +175,12 @@ const Products = () => {
                   packaging, we maintain strict quality control at every step.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="bg-background rounded-xl p-4 border border-primary/5">
-                    <Package className="w-8 h-8 text-primary mb-2" />
+                  <div className="bg-background rounded-xl p-4 border border-primary/5 hover:border-orange-400/15 transition-colors">
+                    <Package className="w-8 h-8 text-orange-400 mb-2" />
                     <div className="font-bold text-foreground">Fresh Packaging</div>
                     <div className="text-sm text-muted-foreground">Maintains quality</div>
                   </div>
-                  <div className="bg-background rounded-xl p-4 border border-primary/5">
+                  <div className="bg-background rounded-xl p-4 border border-primary/5 hover:border-primary/20 transition-colors">
                     <Truck className="w-8 h-8 text-primary mb-2" />
                     <div className="font-bold text-foreground">Fast Delivery</div>
                     <div className="text-sm text-muted-foreground">Reliable service</div>
@@ -199,7 +203,7 @@ const Products = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-primary/5">
+        <section className="section-padding bg-primary-light/30">
           <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
               Ready to Order?

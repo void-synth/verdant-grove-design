@@ -102,6 +102,10 @@ export default {
           from: { opacity: "0", transform: "translateX(20px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "slideInRight": {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },

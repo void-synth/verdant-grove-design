@@ -17,20 +17,20 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20">
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6 opacity-0 animate-fade-in"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-orange-400/15 to-primary/15 backdrop-blur-sm border border-orange-400/25 rounded-full text-primary-foreground text-xs sm:text-sm font-medium mb-4 sm:mb-6 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
           >
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <span className="w-2 h-2 bg-gradient-to-r from-orange-400 to-primary rounded-full animate-pulse" />
             Trusted Agro Farm Since 2010
           </div>
 
           {/* Headline */}
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-in"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-primary-foreground leading-tight mb-4 sm:mb-6 px-2 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
             Quality & Sustainable{" "}
@@ -39,7 +39,7 @@ export const Hero = () => {
 
           {/* Supporting Text */}
           <p 
-            className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in"
+            className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 px-4 leading-relaxed opacity-0 animate-fade-in"
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
             From our farms to your table. We deliver premium quality garri, cassava, 
@@ -48,7 +48,7 @@ export const Hero = () => {
 
           {/* CTA Buttons */}
           <div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
             <Link to="/products">
@@ -67,20 +67,20 @@ export const Hero = () => {
 
           {/* Stats */}
           <div 
-            className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 opacity-0 animate-fade-in"
+            className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-primary-foreground/20 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
           >
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">15+</div>
-              <div className="text-sm text-primary-foreground/70">Years Experience</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground">15+</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/70 leading-tight">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">500+</div>
-              <div className="text-sm text-primary-foreground/70">Happy Clients</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground">500+</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/70 leading-tight">Happy Clients</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary-foreground">50+</div>
-              <div className="text-sm text-primary-foreground/70">Tons Monthly</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground">50+</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/70 leading-tight">Tons Monthly</div>
             </div>
           </div>
         </div>

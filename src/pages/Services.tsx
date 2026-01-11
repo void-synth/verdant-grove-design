@@ -76,11 +76,11 @@ const Services = () => {
             />
             <div className="absolute inset-0 bg-[hsl(150,30%,10%,0.7)]" />
           </div>
-          <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
+          <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 px-2">
               Our Services
             </h1>
-            <p className="text-xl sm:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 max-w-3xl mx-auto px-4">
               Comprehensive agro-processing solutions tailored to your needs
             </p>
           </div>
@@ -89,26 +89,26 @@ const Services = () => {
         {/* Services Grid */}
         <section className="section-padding bg-background">
           <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
-                <Factory className="w-4 h-4" />
+            <div className="text-center mb-10 sm:mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4 border border-primary/15">
+                <Factory className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
                 What We Offer
               </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-4">
                 Premium Processing Services
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                 From farm to table, we handle every step with precision and care.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
               {services.map((service, index) => (
                 <div
                   key={index}
                   className="group bg-background rounded-3xl overflow-hidden shadow-lg border border-primary/5 hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -116,19 +116,23 @@ const Services = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
-                    <div className="absolute top-6 left-6">
-                      <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-primary/30">
-                        <service.icon className="w-8 h-8 text-primary" />
+                    <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center border ${
+                        index % 2 === 0
+                          ? 'bg-orange-400/15 border-orange-400/20'
+                          : 'bg-primary/20 border-primary/30'
+                      }`}>
+                        <service.icon className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${index % 2 === 0 ? 'text-orange-400' : 'text-primary'}`} />
                       </div>
                     </div>
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                  <div className="p-5 sm:p-6 md:p-8">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${idx % 2 === 0 ? 'text-orange-400' : 'text-primary'}`} />
                           <span className="text-foreground">{feature}</span>
                         </li>
                       ))}
@@ -177,10 +181,14 @@ const Services = () => {
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-background rounded-2xl p-8 shadow-lg border border-primary/5 text-center"
+                  className="bg-background rounded-2xl p-8 shadow-lg border border-primary/5 text-center hover:border-orange-400/15 transition-colors"
                 >
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <benefit.icon className="w-8 h-8 text-primary" />
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 ${
+                    index % 2 === 0
+                      ? 'bg-orange-400/10'
+                      : 'bg-primary/10'
+                  }`}>
+                    <benefit.icon className={`w-8 h-8 ${index % 2 === 0 ? 'text-orange-400' : 'text-primary'}`} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
@@ -209,13 +217,17 @@ const Services = () => {
                 { step: "04", title: "Packaging", description: "Products are carefully packaged to maintain freshness and quality." },
               ].map((process, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-secondary/30 rounded-2xl p-8 text-center border border-primary/5">
-                    <div className="text-5xl font-bold text-primary/20 mb-4">{process.step}</div>
+                  <div className="bg-secondary/30 rounded-2xl p-8 text-center border border-primary/5 hover:border-orange-400/15 transition-colors">
+                    <div className={`text-5xl font-bold mb-4 ${
+                      index % 2 === 0 ? 'text-orange-400/20' : 'text-primary/20'
+                    }`}>{process.step}</div>
                     <h3 className="text-xl font-bold text-foreground mb-3">{process.title}</h3>
                     <p className="text-muted-foreground">{process.description}</p>
                   </div>
                   {index < 3 && (
-                    <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary/20 transform -translate-y-1/2" />
+                    <div className={`hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 transform -translate-y-1/2 ${
+                      index % 2 === 0 ? 'bg-orange-400/15' : 'bg-primary/15'
+                    }`} />
                   )}
                 </div>
               ))}
@@ -224,7 +236,7 @@ const Services = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-primary/5">
+        <section className="section-padding bg-primary-light/30">
           <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
               Ready to Get Started?
