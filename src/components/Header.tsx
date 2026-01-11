@@ -43,8 +43,8 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-orange-500/90 backdrop-blur-md shadow-medium py-3"
-          : "bg-orange-500/95 backdrop-blur-sm py-5"
+          ? "bg-primary/90 backdrop-blur-md shadow-medium py-3"
+          : "bg-primary/95 backdrop-blur-sm py-5"
       } ${isPageTransition ? 'opacity-0 translate-y-[-10px]' : 'opacity-100 translate-y-0'}`}
     >
       <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,9 +75,9 @@ export const Header = () => {
                   to={link.href}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "text-orange-600 bg-white/20 shadow-sm font-semibold"
+                      ? "text-primary bg-white/20 shadow-sm font-semibold"
                       : isScrolled
-                      ? "text-white hover:text-orange-50 hover:bg-white/10"
+                      ? "text-white hover:text-white hover:bg-white/10"
                       : "text-white/90 hover:text-white hover:bg-white/10"
                   }`}
                 >
@@ -103,7 +103,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-large border border-orange-200 animate-fade-in">
+          <div className="lg:hidden mt-4 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-large border border-primary/20 animate-fade-in">
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => {
                 const isActive = activePath === link.path;
@@ -114,8 +114,8 @@ export const Header = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                       isActive
-                        ? "text-orange-600 bg-orange-50 shadow-sm font-semibold"
-                        : "text-foreground hover:bg-orange-50 hover:text-orange-600"
+                        ? "text-primary bg-primary-light shadow-sm font-semibold"
+                        : "text-foreground hover:bg-primary-light hover:text-primary"
                     }`}
                   >
                     {link.name}
